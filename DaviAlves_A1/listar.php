@@ -1,5 +1,5 @@
 <?php
-include 'Conexao.php';
+include 'conexao.php';
 
 $conn = Conexao::conectar();
 
