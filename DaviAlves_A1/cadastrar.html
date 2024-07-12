@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <div class="menu">
+        <a href="listar.php">Listar</a>
+        <a href="cadastrar.html">Cadastrar</a>
+        <a href="editar.html">Editar</a>
+        <a href="excluir.html">Excluir</a>
+    </div>
+    <div class="container">
+        <h1>Cadastrar</h1>
+        <form action="cadastrar.php" method="post" onsubmit="return validarFormulario()">
+            <label for="razaoSocial">Razão Social</label>
+            <input type="text" id="razaoSocial" name="razaoSocial" maxlength="50" required>
+
+            <label for="nomeFantasia">Nome Fantasia</label>
+            <input type="text" id="nomeFantasia" name="nomeFantasia" maxlength="50" required>
+
+            <label for="cnpj">CNPJ</label>
+            <input type="text" id="cnpj" name="cnpj" maxlength="18" oninput="mascaraCNPJ(this)" required>
+
+            <label for="responsavel">Responsável</label>
+            <input type="text" id="responsavel" name="responsavel" maxlength="50" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="ddd">DDD</label>
+            <input type="text" id="ddd" name="ddd" maxlength="3" oninput="mascaraDDD(this)" required>
+
+            <label for="telefone">Telefone Celular</label>
+            <input type="text" id="telefone" name="telefone" maxlength="10" oninput="mascaraTelefone(this)" required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>
